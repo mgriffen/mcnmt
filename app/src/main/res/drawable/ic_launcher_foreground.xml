@@ -3,8 +3,29 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Placeholder launcher: stylized "M" inside the safe zone (24..84). -->
+
+    <!-- Winding "road" path: starts bottom-left, S-curves to upper-right.
+         Drawn as a stroked line for a route / trail look. Stays inside the
+         adaptive-icon safe zone (~18..90 on each axis). -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M 30,82 C 42,82 42,58 56,58 C 70,58 70,42 78,34" />
+
+    <!-- Start dot (white) at the bottom-left end of the path -->
     <path
         android:fillColor="#FFFFFFFF"
-        android:pathData="M30,32 L30,76 L38,76 L38,46 L52,72 L56,72 L70,46 L70,76 L78,76 L78,32 L70,32 L54,62 L38,32 Z" />
+        android:pathData="M 30,82 m -3,0 a 3,3 0 1,0 6,0 a 3,3 0 1,0 -6,0" />
+
+    <!-- End pin (MCN Orange) at the upper-right end of the path -->
+    <path
+        android:fillColor="#FFF77300"
+        android:pathData="M 78,34 m -9,0 a 9,9 0 1,0 18,0 a 9,9 0 1,0 -18,0" />
+    <!-- Inner white dot inside the orange pin for punch -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M 78,34 m -3,0 a 3,3 0 1,0 6,0 a 3,3 0 1,0 -6,0" />
 </vector>
