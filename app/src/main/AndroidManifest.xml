@@ -47,13 +47,10 @@
             </intent-filter>
         </activity>
 
-        <!-- Trip tracking foreground service. Implementation lands in a later step. -->
-        <!--
         <service
             android:name=".service.TripTrackingService"
             android:exported="false"
             android:foregroundServiceType="location" />
-        -->
 
     </application>
 

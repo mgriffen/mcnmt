@@ -16,4 +16,9 @@ class TripRepository @Inject constructor(
 
     suspend fun getDefaultVehicle(): Vehicle? = vehicleDao.getDefault()
     suspend fun pointCountForTrip(tripId: Long): Int = tripPointDao.countForTrip(tripId)
+
+    suspend fun getTrip(id: Long): Trip? = tripDao.getById(id)
+    suspend fun insertTrip(trip: Trip): Long = tripDao.insert(trip)
+    suspend fun updateTrip(trip: Trip) = tripDao.update(trip)
+    suspend fun addPoint(point: TripPoint) = tripPointDao.insert(point)
 }
