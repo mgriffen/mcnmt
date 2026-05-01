@@ -22,11 +22,17 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.gr1ff3n.mcnmt.R
 import dev.gr1ff3n.mcnmt.ui.theme.MCNMTTheme
 
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier) {
+fun HomeScreen(
+    modifier: Modifier = Modifier,
+    viewModel: HomeViewModel = hiltViewModel(),
+) {
+    val tripCount by viewModel.tripCount.collectAsStateWithLifecycle()
     var tracking by remember { mutableStateOf(false) }
     Surface(modifier = modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(
@@ -68,6 +74,12 @@ fun HomeScreen(modifier: Modifier = Modifier) {
                            else stringResource(R.string.home_start_trip),
                 )
             }
+            Spacer(modifier = Modifier.height(24.dp))
+            Text(
+                text = "Trips logged: $tripCount",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
         }
     }
 }
