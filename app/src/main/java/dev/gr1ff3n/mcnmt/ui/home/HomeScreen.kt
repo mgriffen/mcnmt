@@ -18,6 +18,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -51,6 +52,7 @@ private val requiredPermissions: List<String> = buildList {
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
+    onViewTrips: () -> Unit = {},
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current
@@ -127,11 +129,9 @@ fun HomeScreen(
             }
 
             Spacer(modifier = Modifier.height(24.dp))
-            Text(
-                text = "Trips logged: $tripCount",
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
+            TextButton(onClick = onViewTrips) {
+                Text("View all trips ($tripCount)")
+            }
         }
     }
 }
