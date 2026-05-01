@@ -1,0 +1,71 @@
+# Private working files — plans, specs, scratch, design artifacts
+.working/
+
+# Claude Code
+.claude/
+
+# Dependencies
+node_modules/
+
+# Environment & credentials
+.env
+.env.*
+.npmrc
+credentials.json
+*.pem
+*.key
+
+# Output / generated
+output/
+dist/
+build/
+coverage/
+
+# Browser state / credentials
+profiles/
+
+# OS & editor junk
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# IDE settings (un-ignore per-project if sharing settings intentionally)
+.vscode/
+.idea/
+
+# Design working files
+*.psd
+*.ai
+*.sketch
+
+# Android / Gradle / Kotlin
+.gradle/
+local.properties
+captures/
+*.iml
+*.hprof
+.cxx/
+.kotlin/
+
+# Android build artifacts (signed/unsigned)
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Keystores & signing — NEVER commit
+*.keystore
+*.jks
+keystore.properties
+google-services.json
+release-keys/
+
+# Android Studio navigation/profiler exports
+.navigation/
+proguard/
+
+# One-off scripts (add specific names as needed)
