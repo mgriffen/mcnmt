@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash/launch theme used until Compose takes over. Kept minimal — Compose
+         applies the Material 3 theme via setContent { MCNMTTheme { … } }. -->
+    <style name="Theme.MCNMT" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+    </style>
+</resources>

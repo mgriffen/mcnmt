@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Local-first MVP: no auto-backup. Trip data is the user's responsibility
+         to export (CSV) or move via WorkManager-driven backups in a later phase. -->
+</full-backup-content>

@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Placeholder launcher: stylized "M" inside the safe zone (24..84). -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M30,32 L30,76 L38,76 L38,46 L52,72 L56,72 L70,46 L70,76 L78,76 L78,32 L70,32 L54,62 L38,32 Z" />
+</vector>
