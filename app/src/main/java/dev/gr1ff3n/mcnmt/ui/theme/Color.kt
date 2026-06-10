@@ -31,3 +31,23 @@ val DarkSurface = Color(0xFF0F1A1F)
 val DarkOnSurface = Color(0xFFE0E5E7)
 val DarkSurfaceVariant = Color(0xFF1B2A30)
 val DarkOnSurfaceVariant = Color(0xFFC2CDD2)
+
+// ───────────── Sleek dark theme (dark-first) ─────────────
+// Deep navy-black base with a navy glow at top and an orange action color.
+val AppBgBase = Color(0xFF070F13)        // near-black base
+val AppBgGlowNavy = Color(0xFF154150)    // top-left navy glow
+val AppBgGlowOrange = Color(0x2EF77300)  // faint orange glow, top-right (~18% alpha)
+
+val SleekSurface = Color(0xFF0E1A20)     // raised dark surface
+val SleekText = Color(0xFFEAF2F4)        // primary text
+val SleekTextDim = Color(0xFF8FA3AB)     // secondary text
+
+val AccentOrange = Color(0xFFF77300)     // brand orange (actions)
+val AccentOrangeBright = Color(0xFFFF9A44) // highlight for gradients/glow
+val AccentSage = Color(0xFF9FD0BF)       // quiet success/accent (light-blue/sage)
+
+// Glass card tokens (translucent fill + hairline border over the gradient).
+val GlassFill = Color(0x0FFFFFFF)        // ~6% white
+val GlassFillStrong = Color(0x17FFFFFF)  // ~9% white
+val GlassBorder = Color(0x26FFFFFF)      // ~15% white
+val FieldBorder = Color(0x40FFFFFF)      // ~25% white — visible form-field outline

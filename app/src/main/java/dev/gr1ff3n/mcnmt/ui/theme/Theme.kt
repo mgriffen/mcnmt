@@ -1,6 +1,5 @@
 package dev.gr1ff3n.mcnmt.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
@@ -31,33 +30,37 @@ private val MCNLightScheme = lightColorScheme(
     onSurfaceVariant = LightOnSurfaceVariant,
 )
 
+// Sleek dark scheme (dark-first). Orange is the action color; navy anchors
+// app bars; surfaces are deep navy-black to sit on the gradient backdrop.
 private val MCNDarkScheme = darkColorScheme(
-    primary = MCNNavyLight,
-    onPrimary = MCNNavy20,
-    primaryContainer = MCNNavy,
-    onPrimaryContainer = MCNNavy90,
+    primary = AccentOrange,
+    onPrimary = Color.White,
+    primaryContainer = Color(0xFF0F2A35),
+    onPrimaryContainer = SleekText,
 
-    secondary = MCNOrangeLight,
-    onSecondary = MCNOrange20,
-    secondaryContainer = Color(0xFF7A3E00),
-    onSecondaryContainer = MCNOrange90,
+    secondary = AccentSage,
+    onSecondary = Color(0xFF0A1A14),
+    secondaryContainer = Color(0xFF13312A),
+    onSecondaryContainer = AccentSage,
 
-    tertiary = MCNLightBlue,
-    onTertiary = MCNLightBlue20,
-    tertiaryContainer = MCNLightBlue20,
-    onTertiaryContainer = MCNLightBlue90,
+    tertiary = MCNNavyLight,
+    onTertiary = MCNNavy20,
+    tertiaryContainer = Color(0xFF0F2A35),
+    onTertiaryContainer = SleekText,
 
-    background = DarkSurface,
-    onBackground = DarkOnSurface,
-    surface = DarkSurface,
-    onSurface = DarkOnSurface,
-    surfaceVariant = DarkSurfaceVariant,
-    onSurfaceVariant = DarkOnSurfaceVariant,
+    background = AppBgBase,
+    onBackground = SleekText,
+    surface = SleekSurface,
+    onSurface = SleekText,
+    surfaceVariant = Color(0xFF14242B),
+    onSurfaceVariant = SleekTextDim,
+    outline = GlassBorder,
 )
 
 @Composable
 fun MCNMTTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    // Dark-first: default to the sleek dark scheme regardless of system setting.
+    darkTheme: Boolean = true,
     content: @Composable () -> Unit,
 ) {
     MaterialTheme(
