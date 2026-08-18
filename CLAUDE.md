@@ -50,17 +50,27 @@ Auto-detection target: start trip when moving >10 mph for 30s; stop after severa
 
 This project is PUBLIC.
 
-- **Do not push to origin** unless Matt explicitly says to push
-- **Do not publish** (Play Store, GitHub Release, etc.) unless Matt explicitly says to publish
+- **Push your own branch freely — do not ask.** 🟢 per the git discipline in `~/.claude/CLAUDE.md`.
+  *(This read "**Do not push to origin** unless Matt explicitly says to push" until 2026-08-17. It
+  was superseded by Matt's 2026-08-09 delegation and never updated, and the cost is recorded in the
+  global file: **this repo is the one that "sat at 27 uncommitted, untested changes."** The rule and
+  the incident are the same repo. Push is the backup and the cross-machine sync — withholding it
+  does not protect anything, it strands work.)*
+- **Merging into `main` and pushing `main` route to the orchestrator**, not to Matt — see
+  [[Memory System Orchestrator]] §4.
+- **Do not publish** (Play Store, GitHub Release) unless Matt explicitly says to publish. ⚠️ **This
+  gate stays and is not the same as pushing.** This project is PUBLIC; a store release is
+  outward-facing, hard to reverse, and reaches real users. Pushing a branch to your own remote
+  reaches nobody.
 - **Work on feature branches** — never commit WIP directly to main
 - **Before any push to main:** verify build passes, verify no private files staged (`.working/`, `.claude/`, `.env`, keystores, `local.properties`, `google-services.json`), verify `.gitignore` is current
 - **Ask before any build** (APK/AAB, release bundle, long Gradle task) — builds take minutes and block other work
-- When in doubt, ask before pushing
+- When in doubt, **push** — a pushed branch is recoverable and an unpushed one is invisible to every other machine. Doubt about *landing* it is what routes to the orchestrator.
 
 ## Machine handoff
 
 Before ending a session where work is in progress:
-1. Push the current branch to origin (with Matt's approval)
+1. Push the current branch to origin — 🟢, no approval needed, and never end a session without it
 2. Update the Obsidian vault note with: current branch name, what was completed, what's next
 3. The vault note is the handoff document — the next session on any machine reads it first
 
